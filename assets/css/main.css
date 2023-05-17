@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --header-height: 3rem;
+
+    /*==== colors =====*/
+    --hue-color: 49; /*hsl(49, 92%, 55%)*/
+
+    /* hsl color mode */
+    --first-color: hsl(var(--hue-color), 92%, 55%);
+    --first-color-alt: hsl(var(--hue-color), 82%, 45%);
+    --first-color-lighter: hsl(var(--hue-color), 100%, 72%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 36%);
+    --text-color-light: hsl(var(--hue-color), 8%, 55%);
+    --input-color: hsl(var(--hue-color), 98%, 91%);
+    --body-color: hsl(var(--hue-color), 92%, 99%);
+    --container-color: #fff;
+    --border-color: hsl(49, 0%, 86%);
+
+
+    /*===== font and typography =====*/
+    --body-font:'Poppins', sans-serif;
+
+    /* font sizes .5rem = 8px, 1 rem = 16 etc*/
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.815rem;
+    --smaller-font-size: 0.75rem;
+
+    /* font weight */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+}
+
+/* ==== base ==== */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+h1, h2, h3, h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+textarea{
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    padding: 0.5rem 1rem;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+    border: 0.5px solid var(--border-color);
+}
+
+input{
+    font-family: var(--body-font);
+    size: var(--normal-font-size);
+    padding: 0.5rem 1rem;
+    background-color: var(--body-color);
+    border: none;
+    border-bottom: 1.75px solid var(--border-color);
+}
+
+button{
+    border: none;
+    font-family: var(--body-font);
+    color: var(--title-color);
+}
+
+/* ==== universal ==== */
+.container{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.title{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: var(--big-font-size);
+}
+
+.button{
+    display:inline-block;
+    color:#fff;
+    text-align: center;
+    font-weight: var(--font-semi-bold);
+    background: var(--first-color);
+    width: 9.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.button:hover, .button:focus, .btn:active{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/* animations */
+@keyframes arrivedContent{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* header */
+header .container {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#branding a{
+    color: var(--title-color);
+    margin: 0;
+}
+
+#branding h1{
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 0.5rem;
+}
+
+.navbar ul li{
+    padding: 0 1rem;
+}
+
+.navbar a{
+    cursor: pointer;
+    font-size: var(--normal-font-size);
+    border-bottom: 0rem solid var(--text-color-light);
+    transition: font-size 0.5s ease-out;
+}
+
+.navbar a:hover, .navbar a:focus, .navbar a:active{
+    color: var(--first-color-alt);
+    border-bottom: 0.15rem solid var(--text-color-light);
+    font-size: 1.025rem;
+}
+
+.nav-active{
+    color: var(--first-color-alt);
+    font-weight: bold;
+}
+
+/* statement */
+.statement .container{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+.statement-text, .statement-img {
+    flex: 1;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    max-width: 40%;
+}
+
+#purpose-text{
+    padding-left: 30px;
+}
+
+.interest-form{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.interest-form h3{
+    display: inline;
+    padding: 0.5rem;
+}
+
+/* projects */
+.projects .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .project-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+}
+
+.project-images .block{
+    padding: 2rem;
+}
+
+.projects .button{
+    margin-bottom: 1rem;
+}
+
+/* footer */
+footer .container{
+    position: absolute;
+    top:99;
+    bottom: 1;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: end;
+}
+
+.container .copyright{
+    justify-self: start;
+}
+
+.container .socials{
+    justify-self: end;
+    font-size: 2rem;
+}
+
+/* ========= contact page ============ */
+
+/* email form */
+.email-form .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 2rem 0rem;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-control{
+    padding: 0.5rem 0rem;
+}
+
+.form-control i{
+    font-size: 1.125rem;
+    padding-right: 0.5rem;
+}
+
+.form-control textarea{
+    float: right;
+    font-size: var(--normal-font-size);
+    outline: 1px solid var(--border-color);
+    transition-property: outline;
+    transition-duration: 0.2s;
+
+}
+
+.form-control textarea:focus, .form-control textarea:active{
+    outline: 1.5px solid var(--first-color);
+}
+
+.form-control input[type = 'text'],
+.form-control input[type = 'email']{
+    outline: none;
+    font-size: var(--normal-font-size);
+    transition-property: border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+}
+
+.form-control input[type = 'text']:focus, .form-control input[type = 'text']:active,
+.form-control input[type = 'email']:focus, .form-control input[type = 'email']:active{
+    border-color: var(--first-color);
+}
+
+/* founders */
+.founders .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.125rem dashed var(--border-color);
+    margin: 1rem;
+    padding: 2rem 0rem;
+}
+
+.box{
+    font-size: 1.2rem;
+    padding: 1.25rem;
+}
+
+/* ============ resources =========== */
+
+/* resource tab buttons */
+.resources .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 4rem;
+}
+
+.resource-tabs{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.resource-tabs button{
+    flex-grow: 1;
+    cursor: pointer;
+    font-size: var(--h2-font-size);
+    height: 3.5rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.tab-active{
+    cursor: none;
+    background-color: var(--first-color);
+}
+
+.resource-contents .content {
+    display: none;
+    animation-name: arrivedContent;
+    animation-duration: 0.5s;
+}
+
+.resource-contents .content.active{
+    display:block;
+}
+
+.resource-contents li{
+    padding: 0.25rem;
+}
+
+.resource-contents a{
+    text-decoration: underline;
+    color: var(--text-color-light);
+    transition: color 0.25s ease, text-decoration 0.25s ease;
+}
+.resource-contents a:hover, .resource-contents a:active{
+     color: var(--first-color-alt);
+}
