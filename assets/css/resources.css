@@ -1,0 +1,39 @@
+.resources .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 4rem;
+}
+
+.resource-tabs{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.resource-tabs button{
+    flex-grow: 1;
+    cursor: pointer;
+    font-size: var(--h2-font-size);
+    height: 3.5rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.tab-active{
+    cursor: none;
+    background-color: var(--first-color);
+}
+
+.resource-contents .content {
+    display: none;
+    animation-name: arrivedContent;
+    animation-duration: 0.5s;
+}
+
+.resource-contents .content.active{
+    display:block;
+}
+
+.resource-contents li{
+    padding: 0.25rem;
+}

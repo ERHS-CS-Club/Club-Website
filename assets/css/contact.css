@@ -1,0 +1,77 @@
+/* email form */
+.email-form .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 2rem 0rem;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-control{
+    padding: 0.5rem 0rem;
+}
+
+.form-control i{
+    font-size: 1.125rem;
+    padding-right: 0.5rem;
+}
+
+.form-control textarea{
+    float: right;
+    font-size: var(--normal-font-size);
+    outline: 1px solid var(--border-color);
+    transition-property: outline;
+    transition-duration: 0.2s;
+
+}
+
+.form-control textarea:focus, .form-control textarea:active{
+    outline: 1.5px solid var(--first-color);
+}
+
+.form-control input[type = 'text'],
+.form-control input[type = 'email']{
+    outline: none;
+    font-size: var(--normal-font-size);
+    transition-property: border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+}
+
+.form-control input[type = 'text']:focus, .form-control input[type = 'text']:active,
+.form-control input[type = 'email']:focus, .form-control input[type = 'email']:active{
+    border-color: var(--first-color);
+}
+/* remind code */
+.remind .container{
+    margin: 0.5rem;
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+
+
+/* founders */
+.founders .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.125rem dashed var(--border-color);
+    margin: 1rem;
+    padding: 2rem 0rem;
+}
+
+.box{
+    font-size: 1.2rem;
+    padding: 1.25rem;
+}
