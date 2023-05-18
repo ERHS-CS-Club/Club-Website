@@ -27,9 +27,6 @@
     float: right;
     font-size: var(--normal-font-size);
     outline: 1px solid var(--border-color);
-    transition-property: outline;
-    transition-duration: 0.2s;
-
 }
 
 .form-control textarea:focus, .form-control textarea:active{

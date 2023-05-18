@@ -153,16 +153,11 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
 #branding a{
     color: var(--title-color);
-    margin: 0;
-}
-
-#branding h1{
-    padding-left: 3rem;
-    padding-top: 1rem;
 }
 
 .navbar ul{
