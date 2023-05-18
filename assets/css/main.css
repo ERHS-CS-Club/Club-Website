@@ -139,18 +139,6 @@ button{
     transform: scale(1.05);
 }
 
-/* animations */
-@keyframes arrivedContent{
-    0%{
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 /* header */
 header .container {
     min-height: 70px;
@@ -327,6 +315,17 @@ footer .container{
 .form-control input[type = 'email']:focus, .form-control input[type = 'email']:active{
     border-color: var(--first-color);
 }
+/* remind code */
+.remind .container{
+    margin: 0.5rem;
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+
 
 /* founders */
 .founders .container{
