@@ -15,16 +15,18 @@
 }
 
 .form-control{
-    padding: 0.5rem 0rem;
+    display: flex;
+    margin: 0.5rem;
 }
 
 .form-control i{
     font-size: 1.125rem;
+    padding-top: 0.45rem;
     padding-right: 0.5rem;
 }
 
 .form-control textarea{
-    float: right;
+    width: 100%;
     font-size: var(--normal-font-size);
     outline: 1px solid var(--border-color);
 }
@@ -36,6 +38,7 @@
 .form-control input[type = 'text'],
 .form-control input[type = 'email']{
     outline: none;
+    width: 100%;
     font-size: var(--normal-font-size);
     transition-property: border-color;
     transition-duration: 0.2s;
@@ -55,8 +58,6 @@
     align-items: center;
     border-bottom: 0.125rem dashed var(--border-color);
 }
-
-
 
 /* founders */
 .founders .container{
