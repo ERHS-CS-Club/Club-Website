@@ -73,3 +73,11 @@
     font-size: 1.2rem;
     padding: 1.25rem;
 }
+
+.box:nth-child(2){
+    transition-delay: 0.3s;
+}
+
+.box:nth-child(3){
+    transition-delay: 0.5s;
+}

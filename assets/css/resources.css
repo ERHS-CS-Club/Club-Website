@@ -26,7 +26,7 @@
 
 .resource-contents .content {
     display: none;
-    animation-name: arrivedContent;
+    animation-name: fade-right;
     animation-duration: 0.5s;
 }
 
@@ -36,4 +36,15 @@
 
 .resource-contents li{
     padding: 0.25rem;
+}
+
+@keyframes fade-right{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

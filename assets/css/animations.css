@@ -1,10 +1,28 @@
-@keyframes arrivedContent{
-    0%{
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+.animate-fade-right{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.7s;
+}
+
+.animate-fade-left{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.7s;
+}
+
+.animate-fade-up{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s;
+}
+
+.animate-fade-down{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.7s;
+}
+
+.show{
+    opacity: 1;
+    transform: translate(0, 0);
 }
