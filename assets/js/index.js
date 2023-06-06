@@ -16,3 +16,15 @@ hiddenElements.forEach(div =>{
     observer.observe(div);
 })
 
+const hoverImages = document.querySelectorAll('.js-hover');
+hoverImages.forEach((element) => {
+    element.addEventListener('mouseover', hoverActive);
+});
+
+function hoverActive(e){
+    if (!e.target.classList.contains('active')){
+        console.log(e);
+        e.target.classList.add('active');
+    }
+}
+

@@ -131,6 +131,7 @@ button{
     color:#fff;
     text-align: center;
     font-weight: var(--font-semi-bold);
+    font-size: var(--h3-font-size);
     background-color: var(--first-color);
     width: 9.5rem;
     padding: 0.5rem;
@@ -262,6 +263,9 @@ header .container {
     padding: 0.5rem;
 }
 
+
+
+
 /* projects */
 .projects .container{
     display: flex;
@@ -269,6 +273,8 @@ header .container {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: var(--h2-font-size);
+    max-width: 90%;
 }
 
 .container .project-images{
@@ -283,9 +289,27 @@ header .container {
     padding: 2rem;
 }
 
-.projects .button{
-    margin-bottom: 1rem;
+.js-hover{
+    filter: grayscale(0.5) drop-shadow(0 0 0.2rem black);
+    opacity: 0.8;
+    scale: 1;
+    transition: all 0.5s;
 }
+
+.js-hover:hover{
+    filter: drop-shadow(0 0 0.5rem black);
+    scale: 1.025;
+}
+
+.js-hover.active{
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.description{
+
+}
+
 
 /* footer */
 footer .container{
