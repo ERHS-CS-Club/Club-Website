@@ -217,8 +217,10 @@ header .container {
 }
 
 .statement-text{
-    margin-top: 3rem;
     flex: 1 1 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .statement-img {
     flex: 1 1 300px;
@@ -230,8 +232,8 @@ header .container {
 
 /* yellow bckgrnd section */
 .statement.what-we-do{
-    padding-left: 4rem;
     background-color: var(--first-color-lighter);
+    justify-content: space-between;
 }
 
 .statement li{
@@ -263,8 +265,61 @@ header .container {
     padding: 0.5rem;
 }
 
+.image-container{
+    padding-left: 3rem;
+    width:50%;
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 
+.image-box{
+    filter: drop-shadow(0 3px 0.2rem black);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    scale: 1;
+    transform: rotateZ(0deg);
+    transition: all 1s;
+}
 
+.image-box:nth-child(1):hover{
+    scale: 1.05;
+    transform: rotateZ(-5deg);
+    filter: drop-shadow(0 0 0.7rem var(--first-color-alt));
+}
+
+.image-box:nth-child(1) img{
+    width: 300px;
+    border-radius: 4px;
+    transform: rotateZ(5deg);
+}
+
+.image-box:nth-child(1) svg{
+    position: absolute;
+    transform: translate(160px, -90px) rotateZ(10deg);
+}
+
+.image-box:nth-child(2):hover{
+    scale: 1.05;
+    transform: rotateZ(5deg);
+    filter: drop-shadow(0 0 0.7rem var(--first-color-alt));
+}
+
+.image-box:nth-child(2) img{
+    width: 300px;
+    height:350px;
+    border-radius: 4px;
+    transform: rotateZ(-5deg);
+}
+
+.image-box:nth-child(2) svg{
+    position: absolute;
+    transform: translate(-135px, 160px) rotateZ(-45deg);
+}
 
 /* projects */
 .projects .container{
