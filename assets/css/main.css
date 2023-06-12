@@ -117,6 +117,7 @@ button{
 }
 
 .hyperlink{
+    cursor: pointer;
     text-decoration: underline;
     color: var(--text-color-light);
     transition: color 0.25s ease, text-decoration 0.25s ease;
@@ -172,8 +173,13 @@ header .container {
 }
 
 #branding a{
+    font-size: var(--h1-font-size);
     margin: 1rem;
     color: var(--title-color);
+}
+
+#branding:hover, #branding:active{
+    filter: drop-shadow(-4px 2px 0px var(--first-color));
 }
 
 .navbar ul{
@@ -324,7 +330,6 @@ header .container {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: var(--h3-font-size);
     max-width: 90%;
 }
 
@@ -355,10 +360,6 @@ header .container {
 .js-hover.active{
     filter: grayscale(0);
     opacity: 1;
-}
-
-.description{
-
 }
 
 
