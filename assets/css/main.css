@@ -188,7 +188,7 @@ header .container {
 
 .navbar a{
     cursor: pointer;
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     border-bottom: 0rem solid var(--text-color-light);
     transition: font-size 0.5s ease-out;
 }
@@ -196,7 +196,7 @@ header .container {
 .navbar a:hover, .navbar a:focus, .navbar a:active{
     color: var(--first-color-alt);
     border-bottom: 0.15rem solid var(--text-color-light);
-    font-size: 105%;
+    font-size: 90%;
 }
 
 .nav-active{
