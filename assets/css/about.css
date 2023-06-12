@@ -18,9 +18,10 @@
     border: none;
 }
 
-#meeting-info img{
+#meeting-info img, #purpose img{
     width: 400px;
     filter: drop-shadow(0 0 4px black);
+    border-radius: 5px;
 }
 
 .team-info .container{
