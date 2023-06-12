@@ -1,0 +1,37 @@
+.container.text-container{
+    font-size: 1.15rem;
+    padding: 2rem 0rem;
+    border-bottom: 0.125rem dashed var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textbox{
+    padding-right: 2rem;
+}
+
+#meeting-info iframe{
+    padding-top: 2rem;
+    width: 75%;
+    min-height: 400px;
+    border: none;
+}
+
+#meeting-info img{
+    width: 400px;
+    filter: drop-shadow(0 0 4px black);
+}
+
+.team-info .container{
+    margin-top: 2rem;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.bio-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
