@@ -23,7 +23,6 @@ hoverImages.forEach((element) => {
 
 function hoverActive(e){
     if (!e.target.classList.contains('active')){
-        console.log(e);
         e.target.classList.add('active');
     }
 }
