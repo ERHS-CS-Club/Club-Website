@@ -1,0 +1,45 @@
+.project-intro .container{
+    padding: 2rem 0rem;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+.project-showcase .container{
+    padding: 2rem 0rem;
+    border-bottom: 0.125rem dashed var(--border-color);
+}
+
+.image-showcase{
+    display: flex;
+    overflow-x: scroll;
+    margin: 2rem 0rem;
+    scroll-snap-type: x;
+}
+
+.project-image{
+    flex: 1 1 55%;
+    scroll-snap-align: center;
+    min-width: 65%;
+    margin-right: 5rem;
+    filter: brightness(55%) sepia(100%) hue-rotate(15deg) saturate(250%);
+    transition: filter 0.5s;
+    border-radius: 3px;
+}
+
+.project-image:hover, .project-image:focus{
+    filter: brightness(100%);
+}
+
+.project-tools{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-tools li{
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.project-tools svg{
+    padding-right: 0.5rem;
+}
