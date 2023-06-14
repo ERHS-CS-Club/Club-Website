@@ -36,3 +36,12 @@
     align-items: center;
 }
 
+@media screen and (max-width: 720px){
+    .container.text-container{
+        flex-direction: column;
+    }
+
+    img{
+        padding-top: 2rem;
+    }
+}

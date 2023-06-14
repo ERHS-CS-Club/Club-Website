@@ -210,6 +210,72 @@ header .container {
     font-weight: bold;
 }
 
+.hamburger{
+    left: 85%;
+    width: 40px;
+    cursor: pointer;
+    background: none;
+    display: none;
+}
+
+.hamburger .bar, .hamburger:before, .hamburger:after{
+    content: '';
+    display: block; 
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0px;
+    transition: all 0.4s;
+}
+
+@media screen and (max-width: 720px){
+    .hamburger{
+        display: block;
+        z-index: 99;
+    }
+    .hamburger.active{
+        position: fixed;
+        top: 3%;
+    }
+    .hamburger.active:before{
+        transform: translate(0px, 11px) rotate(-45deg);
+    }
+
+    .hamburger.active:after{
+        transform: translate(0px, -11px) rotate(45deg);
+    }
+
+    .hamburger.active .bar{
+        opacity: 0;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        padding-top: 1.25rem;
+        background-color: var(--body-color);
+        z-index: 90;
+        transform: translateY(-200px);
+        transition: 0.4s;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li{
+        padding: 5px 0;
+    }
+
+    .navbar.active{
+        transform: translateY(0);
+    }
+}
+
 /* statement */
 .statement .container{
     display: flex;
@@ -284,8 +350,13 @@ header .container {
     justify-content: center;
     padding:2rem;
     scale: 1;
+    flex: 1;
     transform: rotateZ(0deg);
     transition: all 1s;
+}
+
+.image-box svg{
+    display: none;
 }
 
 .image-box:nth-child(1):hover{
@@ -323,6 +394,25 @@ header .container {
     transform: translate(-135px, 160px) rotateZ(-45deg);
 }
 
+@media screen and (min-width: 950px){
+    .image-box svg{
+        display: block
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .statement .container{
+        flex-direction: column;
+    }
+
+    .image-container{
+        padding-left: 0;
+        padding-top: 2rem;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 /* projects */
 .projects .container{
     display: flex;
@@ -333,7 +423,7 @@ header .container {
     max-width: 90%;
 }
 
-.container .project-images{
+.project-images{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -360,6 +450,13 @@ header .container {
 .js-hover.active{
     filter: grayscale(0);
     opacity: 1;
+}
+
+@media screen and (max-width: 720px){
+
+    .project-images{
+        flex-direction: column;
+    }
 }
 
 
